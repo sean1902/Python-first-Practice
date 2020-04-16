@@ -135,7 +135,7 @@
 
 ## 练习1
 * 安装Anaconda并更新它以便拥有   所有包的最新版本。 我们将使用Python 3.4（而不是以前的Python 2.7版本）。
-* 通过键入以下命令启动Spyder并计算76：     
+* 通过键入以下命令启动Spyder并计算7**6：     
   
   x = 7 ** 6   打印（x）
 
@@ -150,7 +150,7 @@
 * 在某些语句之后，会加一个缩进; 缩进减少，则表示当前块结束。
 * 例如
     x = 7 ** 6
-    print（x）#witt. fron't  inden-tation
+    print（x）# witt. fron't  inden-tation
 * 这段代码在Python中是错误的，虽然它在C ++，Matlab和许多其他代码或应用程序中是可以接受的。
 
 
@@ -236,7 +236,7 @@
 import  decimal  
 # import  the  libray  "decimal"    
 # display  2  decimal  precision
-print (round (3*1415 ,   2))   #  result  3. 14
+print (round (3.1415 ,   2))   #  result  3. 14
 print (round (9 .995 ,   2))   #  result  9. 99
 
 #call   function   "Decimal "  from lib "decimal"
@@ -306,17 +306,21 @@ print(w.strip('http://')) #delete sth
 ```python
 
 l = [1, 2, 3.14, 'data'] #list
-print (type(l))l.append ([4,  3])
-print(l)l.extend (['delta' ,5 ,6] )   #add  a  list
-print(l)l.insert(3, 'beta')  #insert  before  index 3
-print(l)l.remove ('data')   #delete an elementprint(l)
+print (type(l))
+l.append([4, 3])
+print(l)
+l.extend(['delta', 5, 6] )   #add a list
+print(l)
+l.insert(3, 'beta')  #insert before index 3
+print(l)
+l.remove('data')   #delete an elementprint(l)
 ```
 ```python
-<class 'list'>    
-[1, 2, 3.14, 'data', [4, 3]]    
-[1, 2, 3.14, 'data', [4, 3], 'delta', 5, 6]    
-[1, 2, 3.14, 'beta', 'data', [4, 3], 'delta', 5, 6]    
-[1, 2, 3.14, 'beta', [4, 3], 'delta', 5, 6]    
+<class 'list'>
+[1, 2, 3.14, 'data', [4, 3]]
+[1, 2, 3.14, 'data', [4, 3], 'delta', 5, 6]
+[1, 2, 3.14, 'beta', 'data', [4, 3], 'delta', 5, 6]
+[1, 2, 3.14, 'beta', [4, 3], 'delta', 5, 6]
 ```
 
 ```python
@@ -326,16 +330,16 @@ print(l)l.remove ('data')   #delete an elementprint(l)
 * 在Python中，如果要将值从一个对象传递给另一个对象，则=(等号)将按地址传递值。
 * 例如，
 ```python
-x = [1, 2. 3, 4]
+x = [1, 2, 3, 4]
 y = x
 y[0] = 5
 print(x)
 
 x = [1, 2, 3, 4]
-z  =  x.copy()
+z = x.copy()
 z[0] = 5
 print (x)
-输出将会是[5,2,3,4],[1,2,3,4]
+输出将会是[5, 2, 3, 4], [1, 2, 3, 4]
 ```
 
 
@@ -346,7 +350,7 @@ print (x)
 
 * 我们可以创建一个包含多行的列表
 ```python
-a  =  [[1,2 , 3 ,4],[1,2 ,3,4],[1,2 ,3]] 
+a = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3]] 
 print(a)
 print(a[0][3])
 ```
@@ -378,9 +382,9 @@ print(a[0][3])
 ```python
 a = [24, 16, 54]
 b = []
-if  a[0]< a[1]  and a[0]< a[2] :
+if a[0]< a[1] and a[0]< a[2]:
     b.append(a[0])
-    if  a[1]  <  a[2]:
+    if a[1] < a[2]:
         b.append(a[1])
         b.append(a[2])
     else:                 
@@ -396,9 +400,9 @@ if  a[0]< a[1]  and a[0]< a[2] :
 ## 循环语句 （Loops）
 * 循环语句有很多不同的样式代码，我们只提供两个常用的语句。
 ```python
-     for...in ... ：statement A
-     是循环中最常用的语句，通常与range（start,end,step）一起使用,start为起始值，end为结束值，step为步长。 例如，                
-     range(0,8,1)  给出[0，1，2，3，4，5，6，7]
+     for ... in ... ：statement A
+     是循环中最常用的语句，通常与range(start, end, step)一起使用，start为起始值，end为结束值，step为步长。 例如，                
+     range(0, 8, 1) 给出[0, 1, 2, 3, 4, 5, 6, 7]
 
 2/                     
         while ...：statement A        
@@ -411,38 +415,38 @@ if  a[0]< a[1]  and a[0]< a[2] :
 
 ## 举例：循环语言(Example: loops)     
 ```python
-# for和range的例子 example  of  for  and  range  
-# 初始值默认值为default start of range is O     
-# 步长默认值为default step of range is 1     
+# for和range的例子 example of for and range  
+# 初始值默认值为0 default start of range is O     
+# 步长默认值为1 default step of range is 1     
 for i in range(2, 10, 3):         
     print(i)         
-    l= i**2         
+    l = i**2         
     print(l)
 
-# white to sum   up 1 to 100
+# while to sum up 1 to 100
 a = 0
-sumup = O
-while  a < 100 :
+sumup = 0
+while a < 100:
     a + 1
     sumup += a
-    print ( sumup)
+    print(sumup)
 ```
 ```python
 ```
 ## break和continue. 
 
-* 你可以在循环语句中使用关键字break，以跳出循环。(you can use the keyword break inside a loop to leave the loop..) 
-* 你也可以在循环语句中使用关键字continue，以暂停当前循环执行后面的语句。(you can use the keyword continue inside a loop to stop pracessing the current iteration of the loop and immediately go on to the next round.)
+* 你可以在循环语句中使用关键字break，以跳出循环。(you can use the keyword break inside a loop to leave the loop.) 
+* 你也可以在循环语句中使用关键字continue，以跳过当前循环，进入下一轮循环。(you can use the keyword continue inside a loop to stop pracessing the current iteration of the loop and immediately go on to the next round.)
 * 举例 E.g.
 ```python
-# search the first
-# be divided by 17
+# search the first number which can
+# be divided by 17 in [300, 350]
 for i in range(300, 351):
-    if i % 17 == O:
-        print (i)
+    if i % 17 == 0:
+        print(i)
         break
-    else :
-        cantinue
+    else:
+        continue
 ```
 ```python
 ```
@@ -450,10 +454,10 @@ for i in range(300, 351):
 * 循环语句可以内嵌在另一个循环语句中(Loop can be written inside another loop)
 
 ```python
-for  i  in range (10):
-     print (i)     
-     for j in range (5):
-         print (j)
+for i in range(10):
+    print(i)     
+    for j in range(5):
+        print(j)
 ```
 ```python
 ```
@@ -464,19 +468,19 @@ for  i  in range (10):
 ```python
 
 ```
-## 功能 (Functions)
+## 函数 (Functions)
 
 
 ```python
 
 ```
 
-## 功能(方法or函数)的声明 (Function declaration)
-* 方法定义如下(Functions are defined as)
+## 函数(方法or函数)的声明 (Function declaration)
+* 函数定义如下(Functions are defined as)
 ```python
-def   TheNameOfFunction(paral, para2):
-      ...      
-      return Outcome
+def TheNameOfFunction(paral, para2):
+    ...      
+    return Outcome
 ```
 * 函数（方法）返回的输出结果会在函数被调用的地方出现。
 
@@ -484,11 +488,11 @@ def   TheNameOfFunction(paral, para2):
 ```
 ## 举例：求两个变量最大值的函数
 ```python
-def  MaxOfTwo (x1, x2):
-     if  x1 >= x2:
-          return x1       
-     else:
-          return x2
+def MaxOfTwo(x1, x2):
+    if x1 >= x2:
+        return x1       
+    else:
+        return x2
 
 a = l
 b = 2
@@ -500,13 +504,13 @@ print(c)
 ```
 
 ## 默认参数
-* Python中的函数没有函数重载(function overloading)。 这意味着你不能有两个共享同名的功能。 但是操作符重载（operator overloading）是正常的。
+* Python中的函数没有函数重载(function overloading)。 这意味着你不能有两个共享同名的函数。但是Python有操作符重载（operator overloading）。
 * 您可以为函数的参数提供默认值，例如。
 
 ```python
-   def MaxOfTwo(xl, x2 = 1): ...
+   def MaxOfTwo(xl, x2=1): ...
 ```
-* 请将您的默认参数放在一堆函数参数的末尾处。
+* 请将您的默认参数放在函数参数的末尾处。
 
 
 ```python
@@ -515,11 +519,11 @@ print(c)
 * 函数还可以返回两个或多个输出。 在这种情况下，你应该这样写出代码：
 
 ```python
-def  f (x1, x2,  x3, ...):
-     ......
-     return(y1,  y2,  y3, ...)
+def f(x1, x2, x3, ...):
+    ......
+    return(y1, y2, y3, ...)
 
-a1,b1,c1 = f(...)
+a1, b1, c1 = f(...)
 ```
 
 
@@ -571,13 +575,13 @@ file_object = open(filename, mode)
 ```python
 
 file = open('newfile.txt', 'r')
-#show whole efile
+# show whole efile
 print(file.read())
-#show first ten characterrs
+# show first ten characterrs
 print(file.read(10))
-#view by line
+# view by line
 print(file.readline())
-#view all by line
+# view all by line
 print(file.readlines())
 file.close()
 
@@ -596,8 +600,8 @@ file.close()
 ```python
 
 file = open('newfile.txt', 'r')
-for  line  in  file:
-     print (line)
+for line in file:
+    print(line)
 file.close()
 
 ```
@@ -627,7 +631,7 @@ Output would be:
 ```python
 file = open（'newfile.txt', 'a')
 file.write('\nI am back again. \n'）
-file.write('Do  you miss me?\n')
+file.write('Do you miss me?\n')
 file.clase()
 
 ```
@@ -642,7 +646,7 @@ file.clase()
 
 ```python
 
-with open(“humpty.txt”) as f：
+with open("humpty.txt") as f：
 
 ```
 
@@ -663,7 +667,7 @@ with open(“humpty.txt”) as f：
 * 示例（Mac / Linux）：
 
 ```python
-open ('/etc/gimp/2.O/gtkrc')
+open('/etc/gimp/2.O/gtkrc')
 ```
 
 * 示例（Windows）：
@@ -702,7 +706,7 @@ open('C:\Users\user\Documents\file.txt')
 
 ```
 
-* 你的方法将返回
+* 你的函数应该返回
 
 ```python
                [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
@@ -722,9 +726,9 @@ open('C:\Users\user\Documents\file.txt')
 
 * 有三种不同的排序算法：
 
-  - 气泡排序：从最后开始，将最后两次的最大值传递给前一个索引。 你第一次遍历每一个数字，你通过最大的数字到一开始。 然后你在剩下的数字中重复一遍。
-  - 选择排序：首先搜索整个列表。 并将最小的数字传递到列表的末尾。 然后搜索整个列表排除最后一个数字。 再重复该步骤。
-  - 插入排序：从一开始，按顺序比较第一个数字和第二个数字，将第一个数字交换为最大数字。 然后重复它构成第二个直到结束。
+  - 气泡排序：从最后开始，将最后两次的最大值传递给前一个索引。你第一次遍历每一个数字，你通过最大的数字到一开始。然后你在剩下的数字中重复一遍。
+  - 选择排序：首先搜索整个列表。并将最小的数字传递到列表的末尾。然后搜索整个列表排除最后一个数字。再重复该步骤。
+  - 插入排序：从一开始，按顺序比较第一个数字和第二个数字，将第一个数字交换为最大数字。然后重复它构成第二个直到结束。
 
 -----以下为英文原文----- 
 
@@ -742,7 +746,7 @@ There are three different algorithms of sorting:
 
 ## 目标2  (Target 2)
 
-* 代码功能
+* 实现以下函数
   -  ![3days_img01.gif](http://upload-images.jianshu.io/upload_images/5522220-418ac8b18c09ac84.gif?imageMogr2/auto-orient/strip)
 
 * 使用派生词的定义，对其数字导数函数进行编码。
@@ -767,7 +771,7 @@ There are three different algorithms of sorting:
 
 ## 目标2的提示  (Hint for Target 2:)
 
-* 衍生物可以近似于 
+* 导数可以近似于 
   
   -  ![3days_img04.gif](http://upload-images.jianshu.io/upload_images/5522220-b07449cf9570fccb.gif?imageMogr2/auto-orient/strip)
  -  ![3days_img05.gif](http://upload-images.jianshu.io/upload_images/5522220-cf4b06f5c8313550.gif?imageMogr2/auto-orient/strip)
@@ -778,9 +782,9 @@ There are three different algorithms of sorting:
 
 
 * 二分法实现如下：
-  - 给出间隔[a，b]，使得f（a）和f（b）具有不同的符号。
-  - 计算中点c = 0.5 （a + b）和中点f（c）的函数值。
-  - 如果f（x）足够，则停止。 否则，将（a，f（a））或（b，f（b））替换为（c，f（c）），以便在新间隔内存在过零点
+  - 给出间隔[a，b]，使得f(a)和f(b)具有不同的符号。
+  - 计算中点c = 0.5 * (a + b)和中点f(c)的函数值。
+  - 如果f(x)足够，则停止。 否则，将(a, f(a))或(b, f(b))替换为(c, f(c))，以便在新间隔内存在过零点
 
 -----以下为英文原文----- 
 
@@ -803,7 +807,7 @@ There are three different algorithms of sorting:
 
 ## 目标3  (Target 3)
 
-* 在面试时 ，你的面试官者要求你编写一个可以给他第n个斐波纳契数字的函数，其中n由你的面试官决定。
+* 在面试时 ，你的面试官要求你编写一个可以给他第n个斐波纳契数字的函数，其中n由你的面试官决定。
 
 
 -----
